@@ -192,6 +192,22 @@
 
     </form>
 
+            <audio id="bg-music" autoplay loop muted>
+  <source src="indexmusic.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  window.addEventListener("load", function() {
+    const audio = document.getElementById("bg-music");
+
+    // Thoda delay deke muted hata rahe hain
+    setTimeout(() => {
+      audio.muted = false;
+    }, 2000); // 2 sec baad volume on
+  });
+</script>
+
     <script>
         const form = document.getElementById('login-form');
         const codeInput = document.getElementById('code');
@@ -247,20 +263,6 @@
 
         createFloatingHearts(document.querySelector('.floating-hearts'), 30);
     </script>
-        <audio id="bg-music" autoplay loop muted>
-  <source src="indexmusic.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
 
-<script>
-  window.addEventListener("load", function() {
-    const audio = document.getElementById("bg-music");
-
-    // Thoda delay deke muted hata rahe hain
-    setTimeout(() => {
-      audio.muted = false;
-    }, 2000); // 2 sec baad volume on
-  });
-</script>
 </body>
 </html>
